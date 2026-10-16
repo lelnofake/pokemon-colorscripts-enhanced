@@ -1,4 +1,4 @@
-.TH "POKEMON-COLORSCRIPTS" "1" "2021-08-20" "GNU" "User Commands"
+.TH "POKEMON-COLORSCRIPTS" "1" "2026-10-16" "GNU" "User Commands"
 
 .SH "NAME"
 .PP
@@ -7,22 +7,31 @@ pokemon-colorscripts - display unicode sprites of pokemon in the terminal
 .SH "SYNOPSIS"
 .PP
 .B pokemon-colorscripts
-.RB [-h|--help]
-.RB [-l|--list]
-.RB [-r|--random
-.IR generation ]
-.RB [-n|--name
-.IR name
-.RB [-s|--shiny]]
-.RB [--no-title]]
+.RB [ -h | --help ]
+.RB [ -l | --list ]
+.RB [ -n | --name
+.IR name ]
+.RB [ -d | --dex
+.IR DEX ]
+.RB [ -r | --random
+.RI [ GEN ]]
+.RB [ --daily ]
+.RB [ -f | --form
+.RI [ FORM ]]
+.RB [ -s | --shiny ]
+.RB [ -c | --compact ]
+.RB [ --no-title ]
 
 .SH "DESCRIPTION"
 .PP
-Pokemon-colorscripts is a CLI utility written in shell script that prints out
-unicode sprites of pokemon to the terminal. Almost all pokemon generations 1-8
-are available (except different forms). You can select
-specific pokemon to be printed out by name or let the script choose a pokemon
-randomly. While choosing randomly you can also filter by generation.
+Pokemon-colorscripts is a CLI utility written in Python that prints out
+unicode sprites of pokemon to the terminal. Pokemon from generations 1-10 and
+alternate forms are available. You can select specific pokemon by name or
+Pokedex number, choose a random pokemon, or show a daily selection unique to
+the date and machine. Name, dex, random, and daily are mutually exclusive
+targets. With no target the command prints help, except that \fB-f\fR
+implicitly selects a random pokemon. Random selection can be limited to one
+generation or a range/list of generations.
 
 .SH "OPTIONS"
 .TP
@@ -30,28 +39,69 @@ randomly. While choosing randomly you can also filter by generation.
 Print help.
 .TP
 .B "-l, --list"
-List all available pokemon.
+List all available pokemon. Combine with \fB-f\fR to list pokemon and their
+forms, with \fB-l -n name\fR or \fB-l -d dex\fR to list one pokemon's forms,
+or with \fB-l -r [GEN]\fR to list a randomly selected pokemon with alternate
+forms. These target options work with or without \fB-f\fR when its value is
+omitted. \fB-l -f\fR without a value lists every pokemon and all its forms,
+including the regular form. \fB-l -f form\fR lists pokemon with any form
+matching the case-insensitive regular expression \fIform\fR, then displays all
+their forms; the match may include the regular form. A valued \fB-f\fR cannot
+be combined with \fB-l -n\fR, \fB-l -d\fR, or \fB-l -r\fR. The display
+modifiers \fB--shiny\fR, \fB--compact\fR, and \fB--no-title\fR do not change
+list output.
 .TP
-\fB -r, --random \fI generation\fR
-Select a pokemon at random and print it out. Can be followed by an optional
-generation number or range 1-8 to print out random pokemon from a specific
-generation or range of generations.
-If no generation is specified, selects from full list of available pokemon.
+\fB -n, --name\fR \fI NAME\fR
+Select a pokemon by a name shown by \fB--list\fR. Names must match the listed
+spelling. A few names use special spellings such as nidoran-f, nidoran-m,
+farfetchd, and mr-mime.
 .TP
-\fB -n, --name\fR \fI name\fR
-Select a specific pokemon to print out by name. Most pokemon are spelled as
-expected. A few pokemon with some special characters in their names might be spelled
-slightly differently. Examples nidoran-f,nidoran-m,farfetchd,mr-mime etc. You can
-check the output of the\fB list\fR option if in doubt.
+\fB -d, --dex\fR \fI DEX\fR
+Select a pokemon by Pokedex number, from 1 through the number of pokemon in
+the installed data. Form selection and display modifiers work the same as with
+\fB--name\fR.
 .TP
-\fB -f, --form\fR \fI form\fR
-Display an alternate form of the pokemon
+\fB -r, --random\fR \fI[GEN]\fR
+Select a pokemon at random and print it out. GEN may be a generation number
+from 1-10, an inclusive range such as 1-3, or a comma-separated list such as
+1,3,6. If omitted, all generations are eligible. For a comma-separated list,
+one listed generation is chosen at random, then a pokemon is selected from
+that generation.
+With \fB-f\fR and no value, it selects a random form, including regular, from
+a pokemon that has alternate forms. With
+\fB-f FORM\fR, it selects a random pokemon that has a form matching the
+case-insensitive regular expression \fIform\fR, then selects a matching form.
+When a pokemon is selected randomly with \fB-r\fR or implicit \fB--form\fR,
+it has a 1 in 128 chance of being shiny unless \fB--shiny\fR is specified.
+.TP
+\fB --daily\fR
+Show the same pokemon, form, and shiny state throughout the current day on the
+same machine. The selection is based on the date and hostname and has a
+deterministic 1-in-128 chance of being shiny. Only \fB--compact\fR and
+\fB--no-title\fR may be used as modifiers; it cannot be combined with
+\fB--list\fR, \fB--form\fR, \fB--shiny\fR, or another target.
+.TP
+\fB -f, --form\fR \fI[FORM]\fR
+Select a form using the case-insensitive regular expression \fIFORM\fR, which
+is searched against form names. With \fB--name\fR or \fB--dex\fR and a value,
+a matching form name is selected directly; otherwise, a matching form is
+selected at random. If there is no match, the pokemon's forms are listed. With
+\fB--random\fR and a value, a pokemon with a matching form and then one of its
+matching forms are selected at random. Without a value, \fB-f\fR with
+\fB--name\fR or \fB--dex\fR selects from all forms, including regular; with
+\fB--random\fR or implicit random selection, it selects from all forms,
+including regular, of pokemon that have alternate forms. Without \fB-f\fR,
+\fB--random\fR selects the regular form. With a value and no target, it
+implicitly selects a random pokemon from generations 1-10. In list mode, see
+the \fB--list\fR description.
 .TP
 \fB -s, --shiny\fR
-Show the shiny version of the pokemon instead
+Show the shiny version of the pokemon. Random selections also have a 1 in 128
+chance of being shiny when this option is not specified. \fB--daily\fR uses
+its own deterministic chance and does not accept this option.
 .TP
-\fB -b, --big\fR
-Show a larger size sprite
+\fB -c, --compact\fR
+Show a smaller sprite. Larger sprites are shown by default.
 .TP
 \fB --no-title\fR
 Do not display pokemon name
@@ -87,3 +137,19 @@ Print out the pokemon chikorita.
 .SS "pokemon-colorscripts -n mudkip -s"
 .PP
 Print out the shiny version of mudkip.
+.SS "pokemon-colorscripts -n charizard -f"
+.PP
+Print out a random form of charizard.
+.SS "pokemon-colorscripts --form mega"
+.PP
+Print out a random pokemon and a random form whose name matches "mega".
+.SS "pokemon-colorscripts -r -f mega"
+.PP
+Print out a random pokemon with a form whose name matches "mega".
+.SS "pokemon-colorscripts -l -f"
+.PP
+List all pokemon and all their forms, including the regular form.
+.SS "pokemon-colorscripts -l -f mega"
+.PP
+List pokemon with any form whose name matches "mega", displaying all of their
+forms.
