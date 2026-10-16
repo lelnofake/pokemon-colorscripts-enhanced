@@ -163,28 +163,28 @@
     "name": "pikachu",
     "forms": [
       "regular",
-      "alolacap",
+      "alola-cap",
       "cosplay",
       "cosplay-belle",
       "cosplay-libre",
-      "cosplay-phd",
+      "cosplay-ph-d",
       "cosplay-popstar",
       "cosplay-rockstar",
       "f",
       "gmax",
-      "hoenncap",
-      "kaloscap",
-      "originalcap",
-      "originalcap-f",
-      "partnercap",
-      "sinnohcap",
+      "hoenn-cap",
+      "kalos-cap",
+      "original-cap",
+      "original-cap-f",
+      "partner-cap",
+      "sinnoh-cap",
       "starter",
       "starter-f",
       "surfing",
       "surfing-f",
-      "unovacap",
-      "worldcap",
-      "worldcap-f"
+      "unova-cap",
+      "world-cap",
+      "world-cap-f"
     ]
   },
   {
@@ -713,7 +713,7 @@
     "forms": [
       "regular",
       "alola",
-      "alola-unlitbone"
+      "alola-unlit-bone"
     ]
   },
   {
@@ -951,7 +951,7 @@
     "name": "kabutops",
     "forms": [
       "regular",
-      "pewterfossil"
+      "pewter-fossil"
     ]
   },
   {
@@ -959,7 +959,7 @@
     "forms": [
       "regular",
       "mega",
-      "pewterfossil"
+      "pewter-fossil"
     ]
   },
   {
@@ -3620,8 +3620,8 @@
     "name": "basculin",
     "forms": [
       "regular",
-      "bluestriped",
-      "whitestriped"
+      "blue-striped",
+      "white-striped"
     ]
   },
   {
@@ -3964,7 +3964,7 @@
     "forms": [
       "regular",
       "mega",
-      "mega-swsh"
+      "mega-sw-sh"
     ]
   },
   {
@@ -4368,14 +4368,14 @@
       "elegant",
       "fancy",
       "garden",
-      "highplains",
+      "high-plains",
       "jungle",
       "marine",
       "meadow",
       "modern",
       "monsoon",
       "ocean",
-      "pok\u00e9ball",
+      "poke-ball",
       "polar",
       "river",
       "sandstorm",
@@ -4463,7 +4463,7 @@
       "diamond",
       "heart",
       "kabuki",
-      "lareine",
+      "la-reine",
       "matron",
       "pharaoh",
       "star"
@@ -4888,7 +4888,7 @@
     "forms": [
       "regular",
       "pau",
-      "pompom",
+      "pom-pom",
       "sensu"
     ]
   },
@@ -5086,36 +5086,36 @@
     "name": "silvally",
     "forms": [
       "regular",
-      "bugmemory",
-      "darkmemory",
-      "dragonmemory",
-      "electricmemory",
-      "fairymemory",
-      "fightingmemory",
-      "firememory",
-      "flyingmemory",
-      "ghostmemory",
-      "grassmemory",
-      "groundmemory",
-      "icememory",
-      "poisonmemory",
-      "psychicmemory",
-      "rockmemory",
-      "steelmemory",
-      "watermemory"
+      "bug-memory",
+      "dark-memory",
+      "dragon-memory",
+      "electric-memory",
+      "fairy-memory",
+      "fighting-memory",
+      "fire-memory",
+      "flying-memory",
+      "ghost-memory",
+      "grass-memory",
+      "ground-memory",
+      "ice-memory",
+      "poison-memory",
+      "psychic-memory",
+      "rock-memory",
+      "steel-memory",
+      "water-memory"
     ]
   },
   {
     "name": "minior",
     "forms": [
       "regular",
-      "core-blue",
-      "core-green",
-      "core-indigo",
-      "core-orange",
-      "core-red",
-      "core-violet",
-      "core-yellow"
+      "blue",
+      "green",
+      "indigo",
+      "orange",
+      "red",
+      "violet",
+      "yellow"
     ]
   },
   {
@@ -5220,14 +5220,14 @@
     "name": "solgaleo",
     "forms": [
       "regular",
-      "radiantsun"
+      "radiant-sun"
     ]
   },
   {
     "name": "lunala",
     "forms": [
       "regular",
-      "fullmoon"
+      "full-moon"
     ]
   },
   {
@@ -5276,8 +5276,8 @@
     "name": "necrozma",
     "forms": [
       "regular",
-      "dawnwings",
-      "duskmane",
+      "dawn-wings",
+      "dusk-mane",
       "ultra"
     ]
   },
@@ -5286,12 +5286,12 @@
     "forms": [
       "regular",
       "mega",
-      "originallivery",
-      "originallivery-mega",
-      "originallivery-poweredoff",
-      "originallivery-sleeping",
-      "presentday-poweredoff",
-      "presentday-sleeping"
+      "original",
+      "original-mega",
+      "original-powered-off",
+      "original-sleeping",
+      "present-day-powered-off",
+      "present-day-sleeping"
     ]
   },
   {
@@ -5597,7 +5597,7 @@
     "forms": [
       "regular",
       "gmax",
-      "lowkey"
+      "low-key"
     ]
   },
   {
@@ -5722,77 +5722,77 @@
     "forms": [
       "regular",
       "caramelswirlcream",
-      "caramelswirlcream-berrysweet",
-      "caramelswirlcream-cloversweet",
-      "caramelswirlcream-flowersweet",
-      "caramelswirlcream-lovesweet",
-      "caramelswirlcream-ribbonsweet",
-      "caramelswirlcream-starsweet",
-      "caramelswirlcream-strawberrysweet",
+      "caramel-swirl-berry",
+      "caramel-swirl-clover",
+      "caramel-swirl-flower",
+      "caramel-swirl-love",
+      "caramel-swirl-ribbon",
+      "caramel-swirl-star",
+      "caramel-swirl-strawberry",
       "gmax",
       "lemoncream",
-      "lemoncream-berrysweet",
-      "lemoncream-cloversweet",
-      "lemoncream-flowersweet",
-      "lemoncream-lovesweet",
-      "lemoncream-ribbonsweet",
-      "lemoncream-starsweet",
-      "lemoncream-strawberrysweet",
+      "lemon-cream-berry",
+      "lemon-cream-clover",
+      "lemon-cream-flower",
+      "lemon-cream-love",
+      "lemon-cream-ribbon",
+      "lemon-cream-star",
+      "lemon-cream-strawberry",
       "matchacream",
-      "matchacream-berrysweet",
-      "matchacream-cloversweet",
-      "matchacream-flowersweet",
-      "matchacream-lovesweet",
-      "matchacream-ribbonsweet",
-      "matchacream-starsweet",
-      "matchacream-strawberrysweet",
+      "matcha-cream-berry",
+      "matcha-cream-clover",
+      "matcha-cream-flower",
+      "matcha-cream-love",
+      "matcha-cream-ribbon",
+      "matcha-cream-star",
+      "matcha-cream-strawberry",
       "mintcream",
-      "mintcream-berrysweet",
-      "mintcream-cloversweet",
-      "mintcream-flowersweet",
-      "mintcream-lovesweet",
-      "mintcream-ribbonsweet",
-      "mintcream-starsweet",
-      "mintcream-strawberrysweet",
+      "mint-cream-berry",
+      "mint-cream-clover",
+      "mint-cream-flower",
+      "mint-cream-love",
+      "mint-cream-ribbon",
+      "mint-cream-star",
+      "mint-cream-strawberry",
       "rainbowswirlcream",
-      "rainbowswirlcream-berrysweet",
-      "rainbowswirlcream-cloversweet",
-      "rainbowswirlcream-flowersweet",
-      "rainbowswirlcream-lovesweet",
-      "rainbowswirlcream-ribbonsweet",
-      "rainbowswirlcream-starsweet",
-      "rainbowswirlcream-strawberrysweet",
+      "rainbow-swirl-berry",
+      "rainbow-swirl-clover",
+      "rainbow-swirl-flower",
+      "rainbow-swirl-love",
+      "rainbow-swirl-ribbon",
+      "rainbow-swirl-star",
+      "rainbow-swirl-strawberry",
       "rubycream",
-      "rubycream-berrysweet",
-      "rubycream-cloversweet",
-      "rubycream-flowersweet",
-      "rubycream-lovesweet",
-      "rubycream-ribbonsweet",
-      "rubycream-starsweet",
-      "rubycream-strawberrysweet",
+      "ruby-cream-berry",
+      "ruby-cream-clover",
+      "ruby-cream-flower",
+      "ruby-cream-love",
+      "ruby-cream-ribbon",
+      "ruby-cream-star",
+      "ruby-cream-strawberry",
       "rubyswirlcream",
-      "rubyswirlcream-berrysweet",
-      "rubyswirlcream-cloversweet",
-      "rubyswirlcream-flowersweet",
-      "rubyswirlcream-lovesweet",
-      "rubyswirlcream-ribbonsweet",
-      "rubyswirlcream-starsweet",
-      "rubyswirlcream-strawberrysweet",
+      "ruby-swirl-berry",
+      "ruby-swirl-clover",
+      "ruby-swirl-flower",
+      "ruby-swirl-love",
+      "ruby-swirl-ribbon",
+      "ruby-swirl-star",
+      "ruby-swirl-strawberry",
       "saltedcream",
-      "saltedcream-berrysweet",
-      "saltedcream-cloversweet",
-      "saltedcream-flowersweet",
-      "saltedcream-lovesweet",
-      "saltedcream-ribbonsweet",
-      "saltedcream-starsweet",
-      "saltedcream-strawberrysweet",
+      "salted-cream-berry",
+      "salted-cream-clover",
+      "salted-cream-flower",
+      "salted-cream-love",
+      "salted-cream-ribbon",
+      "salted-cream-star",
+      "salted-cream-strawberry",
       "vanillacream",
-      "vanillacream-berrysweet",
-      "vanillacream-cloversweet",
-      "vanillacream-flowersweet",
-      "vanillacream-lovesweet",
-      "vanillacream-ribbonsweet",
-      "vanillacream-starsweet"
+      "vanilla-cream-berry",
+      "vanilla-cream-clover",
+      "vanilla-cream-flower",
+      "vanilla-cream-love",
+      "vanilla-cream-ribbon",
+      "vanilla-cream-star"
     ]
   },
   {
@@ -5914,7 +5914,7 @@
     "forms": [
       "regular",
       "crowned",
-      "crowned-behemothblade"
+      "crowned-behemoth-blade"
     ]
   },
   {
@@ -5922,7 +5922,7 @@
     "forms": [
       "regular",
       "crowned",
-      "crowned-behemothbash"
+      "crowned-behemoth-bash"
     ]
   },
   {
@@ -5942,9 +5942,9 @@
     "name": "urshifu",
     "forms": [
       "regular",
-      "rapid",
-      "rapid-gmax",
-      "single-gmax"
+      "rapid-strike",
+      "rapid-strike-gmax",
+      "single-strike-gmax"
     ]
   },
   {
@@ -5982,8 +5982,8 @@
     "name": "calyrex",
     "forms": [
       "regular",
-      "icerider",
-      "shadowrider"
+      "ice-rider",
+      "shadow-rider"
     ]
   },
   {
@@ -6150,7 +6150,7 @@
     "name": "maushold",
     "forms": [
       "regular",
-      "familyofthree"
+      "family-of-three"
     ]
   },
   {
@@ -6504,7 +6504,7 @@
     "name": "dudunsparce",
     "forms": [
       "regular",
-      "threesegment"
+      "three-segment"
     ]
   },
   {
@@ -6657,20 +6657,20 @@
     "name": "koraidon",
     "forms": [
       "regular",
-      "glidingbuild",
-      "limitedbuild",
-      "sprintingbuild",
-      "swimmingbuild"
+      "gliding-build",
+      "limited-build",
+      "sprinting-build",
+      "swimming-build"
     ]
   },
   {
     "name": "miraidon",
     "forms": [
       "regular",
-      "aquaticmode",
-      "drivemode",
-      "glidemode",
-      "lowpowermode"
+      "aquatic-mode",
+      "drive-mode",
+      "glide-mode",
+      "low-power-mode"
     ]
   },
   {
@@ -6728,13 +6728,13 @@
       "cornerstone",
       "hearthflame",
       "wellspring",
-      "cornerstone-outsidebattle",
+      "cornerstone-outside-battle",
       "cornerstone-terastalized",
-      "hearthflame-outsidebattle",
+      "hearthflame-outside-battle",
       "hearthflame-terastalized",
-      "teal-outsidebattle",
+      "teal-outside-battle",
       "teal-terastalized",
-      "wellspring-outsidebattle",
+      "wellspring-outside-battle",
       "wellspring-terastalized"
     ]
   },
@@ -6786,7 +6786,7 @@
     "name": "pecharunt",
     "forms": [
       "regular",
-      "outsidebattle"
+      "outside-battle"
     ]
   },
   {
