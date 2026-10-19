@@ -75,7 +75,7 @@ git clone https://github.com/lelnofake/pokemon-colorscripts-enhanced.git
 ```
 `cd` into the directory and run the install script
 ```
-cd pokemon-colorscripts
+cd pokemon-colorscripts-enhanced
 sudo ./install.sh
 ```
 Now the program should be installed. You can check this by running
@@ -235,8 +235,11 @@ function fish_greeting
 end
 ```
 ## Location of the files
-The program files are located at `/usr/local/opt/pokemon-colorscripts/`, with
-the executable script symlinked to `/usr/local/bin/pokemon-colorscripts`.
+When installed from the AUR, the program files are located at
+`/usr/share/pokemon-colorscripts/`, with the executable script symlinked to
+`/usr/bin/pokemon-colorscripts`. The non-Arch install script places program
+files in `/usr/local/opt/pokemon-colorscripts/` and the command in
+`/usr/local/bin/pokemon-colorscripts`.
 
 ## How it works
 The program itself is a simple python script that prints out text files corresponding

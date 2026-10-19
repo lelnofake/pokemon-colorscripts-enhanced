@@ -1,38 +1,34 @@
-# Maintainer: Phoney Badger <phoneybadgercode.4ikc7 at simplelogin.co>
-pkgname=pokemon-colorscripts-git
+pkgname=pokemon-colorscripts-enhanced-git
 _pkgname=pokemon-colorscripts
-pkgver=r103.c315110
+pkgver=r5.9078b1a
 pkgrel=1
 pkgdesc="CLI utility that prints unicode sprites of pokemon to the terminal"
 arch=('any')
-url="https://gitlab.com/phoneybadger/pokemon-colorscripts.git"
+url="https://github.com/lelnofake/pokemon-colorscripts-enhanced"
 license=('MIT')
-depends=('coreutils' 'python')
+depends=('python')
 makedepends=('git')
-source=("$_pkgname::git+$url")
+source=("$pkgname::git+$url#branch=main")
 md5sums=('SKIP')
 
-pkgver(){
-    cd "$_pkgname"
+pkgver() {
+    cd "$pkgname"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-	cd "$_pkgname"
+    cd "$pkgname"
     # Creating necessary directories and copying files
-    rm -rf "$pkgdir/usr/local/opt/$_pkgname"
-    mkdir -p "$pkgdir/usr/local/opt/$_pkgname/colorscripts/regular"
-    mkdir -p "$pkgdir/usr/local/opt/$_pkgname/colorscripts/shiny"
-    mkdir -p "$pkgdir/usr/local/bin"
-    install -Dm644 colorscripts/small/regular/* -t "$pkgdir/usr/local/opt/$_pkgname/colorscripts/small/regular"
-    install -Dm644 colorscripts/small/shiny/* -t "$pkgdir/usr/local/opt/$_pkgname/colorscripts/small/shiny"
-    install -Dm644 colorscripts/large/regular/* -t "$pkgdir/usr/local/opt/$_pkgname/colorscripts/large/regular"
-    install -Dm644 colorscripts/large/shiny/* -t "$pkgdir/usr/local/opt/$_pkgname/colorscripts/large/shiny"
-    install -Dm644 pokemon.json "$pkgdir/usr/local/opt/$_pkgname/pokemon.json"
-    install -Dm755 pokemon-colorscripts.py "$pkgdir/usr/local/opt/$_pkgname/pokemon-colorscripts.py"
-    install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$_pkgname/LICENSE"
-    install -Dm644 README.md "$pkgdir/usr/share/doc/$_pkgname/README.md"
-    install -Dm644 pokemon-colorscripts.1 "$pkgdir/usr/local/man/man1/pokemon-colorscripts.1"
-    # creating symlink in usr/local/bin
-    ln -sf "/usr/local/opt/$_pkgname/pokemon-colorscripts.py" "$pkgdir/usr/local/bin/pokemon-colorscripts"
+    install -Dm644 colorscripts/small/regular/* -t "$pkgdir/usr/share/$_pkgname/colorscripts/small/regular"
+    install -Dm644 colorscripts/small/shiny/* -t "$pkgdir/usr/share/$_pkgname/colorscripts/small/shiny"
+    install -Dm644 colorscripts/large/regular/* -t "$pkgdir/usr/share/$_pkgname/colorscripts/large/regular"
+    install -Dm644 colorscripts/large/shiny/* -t "$pkgdir/usr/share/$_pkgname/colorscripts/large/shiny"
+    install -Dm644 pokemon.json "$pkgdir/usr/share/$_pkgname/pokemon.json"
+    install -Dm755 pokemon-colorscripts.py "$pkgdir/usr/share/$_pkgname/pokemon-colorscripts.py"
+    install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+    install -Dm644 pokemon-colorscripts.1 "$pkgdir/usr/share/man/man1/pokemon-colorscripts.1"
+    # creating symlink in usr/bin
+    install -d "$pkgdir/usr/bin"
+    ln -s "/usr/share/$_pkgname/pokemon-colorscripts.py" "$pkgdir/usr/bin/pokemon-colorscripts"
 }
